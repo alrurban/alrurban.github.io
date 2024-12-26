@@ -1,0 +1,297 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center; /* Centra el texto de todo el cuerpo */
+}
+
+/* Header */
+.header {
+    background-color: #1b5e20; /* Verde oscuro */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos en el encabezado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el logo y el texto del encabezado */
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Centra los enlaces del menú */
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #aed581; /* Verde claro */
+}
+
+/* Collection Section */
+.collection {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.collection h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1b5e20;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #1b5e20;
+    margin: 15px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+        flex-direction: column; /* Apila los elementos */
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+    }
+
+    .card-container {
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 200px;
+    }
+
+    .collection h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        width: 90%; /* Ocupa el 90% del ancho del dispositivo */
+        max-width: none;
+    }
+}
+/* Ajuste general para imágenes */
+.responsive-img {
+    max-width: 100%; /* Ocupa un máximo del 40% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 20px auto; /* Centra la imagen y agrega espacio */
+    display: block; /* Centra la imagen como bloque */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor apariencia */
+}
+
+/* Ajustes específicos para pantallas grandes */
+@media (min-width: 1024px) {
+    .responsive-img {
+        max-width: 800px; /* Tamaño fijo en pantallas grandes */
+    }
+}
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1b5e20;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+
+.social-media h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1b5e20;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin: 10px 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #1b5e20;
+}
+
+.contact-form {
+    flex: 2;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #1b5e20;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #aed581;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media, .contact-form {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .social-media h3 {
+        text-align: center;
+    }
+}
+
+
+

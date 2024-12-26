@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALR URBAN</title>
+    <link rel="icon" type="image/png" href="Imagenes/ALR URBAN.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="Imagenes/logo.png" alt="Logo de Mi Tienda" class="logo-img">
+            <h1 class="logo-text"></h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Super Gorras</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="collection">
+        <h2>Explora nuestra colección</h2>
+        <div class="card-container">
+            <div class="card" id="bolsas" onclick="openModal('GORRA ALR LA BLUE', 'S/ 160.00', 'Imagenes/Gorras/Gorra2.webp', 'Descripción detallada de la Gorra ALR LA BLUE, un diseño único y moderno para tu estilo.')">
+                <img src="Imagenes/Gorras/Gorra2.webp" alt="Gorra ALR LA BLUE">
+                <h3>GORRA ALR LA BLUE</h3>
+                <b>S/ 160.00</b>
+            </div>
+            <div class="card" id="carteras" onclick="openModal('GORRA ALR SUPER BEIGE', 'S/ 180.00', 'Imagenes/Gorras/Gorra1.png', 'Gorra con un diseño elegante en tonos beige, ideal para cualquier ocasión.')">
+                <img src="Imagenes/Gorras/Gorra1.png" alt="Gorra ALR SUPER BEIGE">
+                <h3>GORRA ALR SUPER BEIGE</h3>
+                <b>S/ 180.00</b>
+            </div>
+            <div class="card" id="perfumes" onclick="openModal('GORRA ALR DEATH', 'S/ 200.00', 'Imagenes/Gorras/Gorra3.webp', 'Una gorra única con un diseño oscuro y moderno, perfecta para los amantes del estilo urbano.')">
+                <img src="Imagenes/Gorras/Gorra3.webp" alt="Gorra ALR DEATH">
+                <h3>GORRA ALR DEATH</h3>
+                <b>S/ 200.00</b>
+            </div>
+            <div class="card" id="bisuteria" onclick="openModal('GORRA ALR SUPER BLACK', 'S/ 180.00', 'Imagenes/Gorras/Gorra4.webp', 'Una gorra negra que combina con todo, el toque perfecto para tu look diario.')">
+                <img src="Imagenes/Gorras/Gorra4.webp" alt="Gorra ALR SUPER BLACK">
+                <h3>GORRA ALR SUPER BLACK</h3>
+                <b>S/ 180.00</b>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Producto">
+            <h3 id="modal-title"></h3>
+            <p id="modal-price"></p>
+            <p id="modal-description"></p>
+            <a id="whatsapp-link" class="buy-button" href="#" target="_blank">Comprar gorra</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 ALR URBAN. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para abrir el modal con texto adicional
+        function openModal(title, price, imgSrc, description) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-price').textContent = price;
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('modal-description').textContent = description;
+            
+            // Establece el enlace de WhatsApp con el mensaje personalizado
+            const whatsappMessage = `Buenas, estoy interesado en la gorra ${title}`;
+            const whatsappNumber = "51974719147";  // Reemplaza con tu número de WhatsApp
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Establece el enlace para el botón de compra
+            document.getElementById('whatsapp-link').setAttribute('href', whatsappUrl);
+            
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        
+    </script>
+    <script
+    src='https://sleekflow.io/whatsapp-button.js'
+    async
+    onLoad="whatsappButton({
+    buttonName:'Super Flow',
+    buttonIconSize: '22',
+    brandImageUrl: 'Imagenes/ALR URBAN.png',
+    brandName:'ALR URBAN',
+    brandSubtitleText:'Bienvenido al Mundo del Flow',
+    buttonSize:'medium',
+    buttonPosition:'right',
+    callToAction:'Iniciar chat',
+    phoneNumber:'51974719147',
+    welcomeMessage:'Bienvenid@👋',
+    prefillMessage:'¡Hola, quiero tener el mejor estilo con la super Gorra ALR URBAN!',
+    })"
+    >
+</script>
+
+<style>
+    /* Estilo para el modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+        max-height: 80%;
+        overflow-y: auto;
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+        color: #1b5e20;
+    }
+
+    .modal-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .modal-content .buy-button {
+        background-color: #1b5e20;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .modal-content .buy-button:hover {
+        background-color: #aed581;
+    }
+
+    .modal-content #modal-description {
+        font-size: 1rem;
+        color: #333;
+        margin-top: 10px;
+        padding: 0 20px;
+        text-align: justify;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+</style>
+
+</body>
+</html>
