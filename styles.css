@@ -76,7 +76,7 @@ body {
 .collection h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #1b5e20;
+    color: #e2e2e2;
 }
 
 .card-container {
@@ -292,6 +292,19 @@ body {
         text-align: center;
     }
 }
+.collection {
+    background-image: url('Imagenes/fondo.avif');
+}
+footer {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.product-container {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 
 
 
